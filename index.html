@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hopalt.com · 내가 필요해서 만든 앱들</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .hp {
+        font-family: 'Noto Sans KR', sans-serif;
+        background: #ffffff;
+        color: #171717;
+        min-height: 100vh;
+    }
+
+    .hero {
+        padding: 72px 48px 56px;
+        border-bottom: 1px solid #eeeeee;
+        background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+    }
+
+    .hero-label {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 11px;
+        color: #8a8a8a;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+    }
+
+    .hero-title {
+        font-size: 34px;
+        font-weight: 700;
+        color: #171717;
+        line-height: 1.3;
+        margin-bottom: 8px;
+    }
+
+    .hero-sub {
+        font-size: 13px;
+        color: #747474;
+        line-height: 1.6;
+    }
+
+    .hero-sub em {
+        font-style: normal;
+        color: #2f8f46;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 12px;
+    }
+
+    .section {
+        padding: 44px 48px;
+    }
+
+    .section-health {
+        background: #faf8f6;
+        border-top: 1px solid #f0ebe6;
+        border-bottom: 1px solid #f0ebe6;
+    }
+
+    .sec-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 24px;
+    }
+
+    .sec-tag {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 5px 10px;
+        border-radius: 999px;
+    }
+
+    .tag-bit {
+        background: #eaf7ed;
+        color: #287c3c;
+        border: 1px solid #cde9d3;
+    }
+
+    .tag-health {
+        background: #fff0e8;
+        color: #a9542c;
+        border: 1px solid #f2d4c3;
+    }
+
+    .sec-desc {
+        font-size: 12px;
+        color: #929292;
+    }
+
+    .app-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    /* BIT2048 */
+    .card-bit {
+        background: #ffffff;
+        border: 1px solid #e8e8e8;
+        border-radius: 18px;
+        padding: 26px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        min-height: 280px;
+        cursor: pointer;
+        text-decoration: none;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+        transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .card-bit:hover {
+        border-color: #a8dcb3;
+        transform: translateY(-3px);
+        box-shadow: 0 12px 32px rgba(47, 143, 70, 0.1);
+    }
+
+    /* BIT2048 HARD */
+    .card-hard {
+        background: #ffffff;
+        border: 1px solid #eeeeee;
+        border-radius: 18px;
+        padding: 26px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        min-height: 280px;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.035);
+    }
+
+    .icon-slot {
+        width: 76px;
+        height: 76px;
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        letter-spacing: 0.03em;
+    }
+
+    img.icon-slot {
+        display: block;
+        object-fit: cover;
+        border: 0;
+        box-shadow: 0 7px 18px rgba(0, 0, 0, 0.14);
+    }
+
+    .icon-slot-green {
+        background: #eaf7ed;
+        border: 1px solid #cde9d3;
+        color: #287c3c;
+    }
+
+    .icon-slot-red {
+        background: #fff0f0;
+        border: 1px solid #f0caca;
+        color: #b94a4a;
+    }
+
+    .icon-slot-warm {
+        width: 76px;
+        height: 76px;
+        border-radius: 18px;
+        background: #fff0e8;
+        border: 1px solid #f2d4c3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        color: #b7653d;
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+
+    .status {
+        font-size: 9px;
+        padding: 2px 6px;
+        border-radius: 2px;
+        align-self: flex-start;
+        letter-spacing: 0.08em;
+        font-family: 'JetBrains Mono', monospace;
+    }
+
+    .status-green {
+        color: #287c3c;
+        border: 1px solid #cde9d3;
+        background: #eaf7ed;
+    }
+
+    .status-red {
+        color: #a94a4a;
+        border: 1px solid #f0caca;
+        background: #fff0f0;
+    }
+
+    .status-warm {
+        font-size: 9px;
+        padding: 2px 8px;
+        border-radius: 10px;
+        align-self: flex-start;
+        letter-spacing: 0.04em;
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+
+    .status-live-warm {
+        color: #a9542c;
+        border: 1px solid #f2d4c3;
+        background: #fff0e8;
+    }
+
+    .status-wip-warm {
+        color: #8a6a32;
+        border: 1px solid #eadbb8;
+        background: #fff9e9;
+    }
+
+    .name-green {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 18px;
+        font-weight: 600;
+        color: #1d3423;
+    }
+
+    .name-red {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 18px;
+        font-weight: 600;
+        color: #4b2828;
+    }
+
+    .name-warm {
+        font-size: 18px;
+        font-weight: 700;
+        color: #36261f;
+        line-height: 1.4;
+    }
+
+    .desc-green {
+        font-size: 12px;
+        color: #637268;
+        line-height: 1.5;
+    }
+
+    .desc-red {
+        font-size: 12px;
+        color: #806969;
+        line-height: 1.5;
+    }
+
+    .desc-warm {
+        font-size: 12px;
+        color: #78675f;
+        line-height: 1.6;
+    }
+
+    .link-green {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        color: #438452;
+        margin-top: auto;
+    }
+
+    .link-red {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        color: #a07474;
+        margin-top: auto;
+    }
+
+    .link-warm {
+        font-size: 11px;
+        color: #b7653d;
+        margin-top: auto;
+    }
+
+    .card-bit:hover .link-green {
+        color: #287c3c;
+    }
+
+    .card-health:hover .link-warm {
+        color: #934521;
+    }
+
+    /* HEALTH 카드 */
+    .card-health {
+        background: #ffffff;
+        border: 1px solid #eadfd8;
+        border-radius: 18px;
+        padding: 26px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        min-height: 280px;
+        cursor: pointer;
+        text-decoration: none;
+        box-shadow: 0 6px 24px rgba(90, 55, 35, 0.05);
+        transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .card-health:hover {
+        border-color: #e2b79e;
+        transform: translateY(-3px);
+        box-shadow: 0 12px 32px rgba(169, 84, 44, 0.1);
+    }
+
+    .card-health-wip {
+        cursor: default;
+        opacity: 0.7;
+    }
+
+    .card-health-wip:hover {
+        border-color: #eadfd8;
+        background: #ffffff;
+        transform: none;
+        box-shadow: 0 6px 24px rgba(90, 55, 35, 0.05);
+    }
+
+    .footer {
+        padding: 28px 48px;
+        border-top: 1px solid #eeeeee;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-brand {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 11px;
+        color: #999999;
+    }
+
+    .footer-brand span {
+        color: #2f8f46;
+    }
+
+    .footer-mail {
+        font-size: 11px;
+        color: #8a8a8a;
+        text-decoration: none;
+    }
+
+    .footer-mail:hover {
+        color: #333333;
+    }
+
+    @media (max-width: 640px) {
+        .hero {
+            padding: 52px 24px 40px;
+        }
+
+        .hero-title {
+            font-size: 28px;
+        }
+
+        .section {
+            padding: 36px 24px;
+        }
+
+        .app-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .card-bit,
+        .card-hard,
+        .card-health {
+            min-height: 260px;
+        }
+
+        .footer {
+            padding: 24px;
+            gap: 12px;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="hp">
+    <div class="hero">
+        <div class="hero-label">hopalt.com</div>
+        <div class="hero-title">내가 필요해서 만든 앱들</div>
+        <div class="hero-sub">
+            <em>// Built for myself, shared with everyone.</em>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="sec-header">
+            <span class="sec-tag tag-bit">BIT series</span>
+            <span class="sec-desc">퍼즐 · 터미널 감성</span>
+        </div>
+        <div class="app-grid">
+            <a class="card-bit" href="https://bit2048.hopalt.com/" target="_blank">
+                <img class="icon-slot icon-slot-green" src="images/icons/bit2048.png" alt="Bit2048 앱 아이콘">
+                <span class="status status-green">LIVE</span>
+                <div class="name-green">Bit2048</div>
+                <div class="desc-green">긱 감성의 2048 퍼즐.<br>글로벌 리더보드 탑재.</div>
+                <div class="link-green">bit2048.hopalt.com →</div>
+            </a>
+            <div class="card-hard">
+                <img class="icon-slot icon-slot-red" src="images/icons/bit2048_hard.png" alt="Bit2048 Hard 앱 아이콘">
+                <span class="status status-red">DEV</span>
+                <div class="name-red">Bit2048 Hard</div>
+                <div class="desc-red">프리즈·미러 블록.<br>더 높은 난이도.</div>
+                <div class="link-red">Coming soon</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-health">
+        <div class="sec-header">
+            <span class="sec-tag tag-health">Health series</span>
+            <span class="sec-desc">일상 건강 · 육아 기록</span>
+        </div>
+        <div class="app-grid">
+            <a class="card-health" href="https://vitalreceipt.hopalt.com/" target="_blank">
+                <img class="icon-slot icon-slot-warm" src="images/icons/vital-receipt.png" alt="혈압 가계부 앱 아이콘">
+                <span class="status-warm status-live-warm">서비스 중</span>
+                <div class="name-warm">혈압 가계부<br>Vital Receipt</div>
+                <div class="desc-warm">혈압·체중·식사·처방.<br>나만의 건강 기록장.</div>
+                <div class="link-warm">vitalreceipt.hopalt.com →</div>
+            </a>
+            <div class="card-health card-health-wip">
+                <div class="icon-slot icon-slot-warm">ICON</div>
+                <span class="status-warm status-wip-warm">개발 중</span>
+                <div class="name-warm">아가노트<br>BabyLog</div>
+                <div class="desc-warm">수유·수면·성장 기록.<br>로컬 저장 기반 육아 앱.</div>
+                <div class="link-warm">Coming soon</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-brand"><span>hopalt</span> · 강콩완콩</div>
+        <a class="footer-mail" href="mailto:hopalt@gmail.com">hopalt@gmail.com</a>
+    </div>
+</div>
+</body>
+</html>
