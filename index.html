@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="hopalt가 직접 쓰려고 만들고 공개한 앱들을 모아둔 홈페이지입니다.">
 <meta property="og:title" content="hopalt.com">
-<meta property="og:description" content="Bit2048, Bit2048 Hard, 혈압 가계부, 아가노트를 한곳에서 만나보세요.">
+<meta property="og:description" content="Bit2048, Bit2048 Hard, Bit2048 Extreme, 혈압 가계부, 아가노트를 한곳에서 만나보세요.">
 <meta property="og:image" content="images/icons/hopalt.png">
 <title>hopalt.com</title>
 <link rel="icon" type="image/png" href="images/icons/hopalt.png">
@@ -27,6 +27,8 @@
         --green-soft: #eaf7ed;
         --red: #ad4d4d;
         --red-soft: #fff0f0;
+        --purple: #7c3aed;
+        --purple-soft: #f2ecff;
         --warm: #a9542c;
         --warm-soft: #fff5ee;
         --baby: #5176c9;
@@ -266,6 +268,11 @@
     .tone-red {
         --tone: var(--red);
         --tone-soft: var(--red-soft);
+    }
+
+    .tone-purple {
+        --tone: var(--purple);
+        --tone-soft: var(--purple-soft);
     }
 
     .tone-warm {
@@ -557,11 +564,11 @@
             </p>
             <div class="hero-stats" aria-label="앱 현황" data-aria-ko="앱 현황" data-aria-en="App status">
                 <div class="stat">
-                    <strong>4</strong>
+                    <strong>5</strong>
                     <span data-ko="통합 등록 앱" data-en="Apps in the hub">통합 등록 앱</span>
                 </div>
                 <div class="stat">
-                    <strong>4</strong>
+                    <strong>5</strong>
                     <span data-ko="공개 홈페이지" data-en="Public homepages">공개 홈페이지</span>
                 </div>
                 <div class="stat">
@@ -614,19 +621,42 @@
                 </div>
                 <h3 class="app-name"><span class="mono">Bit2048 Hard</span></h3>
                 <p class="app-desc"
-                   data-ko="BUG, VIRUS, FREEZE, MIRROR, GLITCH 같은 방해 요소를 넘는 하드코어 데이터 퍼즐 버전입니다."
-                   data-en="The hardcore data-puzzle variant: survive BUG, VIRUS, FREEZE, MIRROR, and GLITCH hazards on the way to TB.">BUG, VIRUS, FREEZE, MIRROR, GLITCH 같은 방해 요소를 넘는 하드코어 데이터 퍼즐 버전입니다.</p>
+                   data-ko="밸런스 패치로 초·중반 진행은 더 부드럽게, 후반 도전은 더 선명하게 다듬은 하드코어 데이터 퍼즐입니다."
+                   data-en="A balance-tuned hardcore data puzzle: smoother early and mid-game progression, with a sharper late-game challenge.">밸런스 패치로 초·중반 진행은 더 부드럽게, 후반 도전은 더 선명하게 다듬은 하드코어 데이터 퍼즐입니다.</p>
                 <div class="showcase showcase-series">
                     <img data-lang-src-ko="images/showcase/bit2048-hard-feature-ko.png" data-lang-src-en="images/showcase/bit2048-hard-feature-en.png" data-lang-tag="ko-KR" src="images/showcase/bit2048-hard-feature-ko.png" alt="Bit2048 Hard 피처 그래픽" data-alt-ko="Bit2048 Hard 피처 그래픽" data-alt-en="Bit2048 Hard feature graphic">
                 </div>
                 <div class="chips">
-                    <span class="chip">Hard mode</span>
+                    <span class="chip">Balance patch</span>
                     <span class="chip">Special blocks</span>
                     <span class="chip">Ranking</span>
                 </div>
                 <div class="actions">
                     <a class="action" href="https://play.google.com/store/apps/details?id=com.hopalt.bit2048hard" target="_blank" rel="noopener">Google Play</a>
                     <a class="action secondary" href="https://bit2048hard.hopalt.com/privacy_policy_bit2048Hard.html" target="_blank" rel="noopener" data-ko="개인정보 처리방침" data-en="Privacy Policy">개인정보 처리방침</a>
+                </div>
+            </article>
+
+            <article class="app-card tone-purple" tabindex="0" role="link" data-home-url="https://bit2048extreme.hopalt.com/" data-label-ko="Bit2048 Extreme 홈페이지 열기" data-label-en="Open Bit2048 Extreme homepage" aria-label="Bit2048 Extreme 홈페이지 열기">
+                <div class="card-top">
+                    <img class="app-icon" src="images/icons/bit2048_extreme.png" alt="Bit2048 Extreme 앱 아이콘" data-alt-ko="Bit2048 Extreme 앱 아이콘" data-alt-en="Bit2048 Extreme app icon">
+                    <span class="status">LIVE</span>
+                </div>
+                <h3 class="app-name"><span class="mono">Bit2048 Extreme</span></h3>
+                <p class="app-desc"
+                   data-ko="페이즈마다 무작위 위험 조합이 고정되는 익스트림 모드. BUG, VIRUS, FREEZE, MIRROR, GLITCH를 뚫고 2048 TB에 도달하세요."
+                   data-en="The extreme mode where each phase locks in a random hazard set. Break through BUG, VIRUS, FREEZE, MIRROR, and GLITCH to reach 2048 TB.">페이즈마다 무작위 위험 조합이 고정되는 익스트림 모드. BUG, VIRUS, FREEZE, MIRROR, GLITCH를 뚫고 2048 TB에 도달하세요.</p>
+                <div class="showcase showcase-series">
+                    <img data-lang-src-ko="images/showcase/bit2048-extreme-feature-ko.png" data-lang-src-en="images/showcase/bit2048-extreme-feature-en.png" data-lang-tag="ko-KR" src="images/showcase/bit2048-extreme-feature-ko.png" alt="Bit2048 Extreme 피처 그래픽" data-alt-ko="Bit2048 Extreme 피처 그래픽" data-alt-en="Bit2048 Extreme feature graphic">
+                </div>
+                <div class="chips">
+                    <span class="chip">Extreme mode</span>
+                    <span class="chip">Random hazards</span>
+                    <span class="chip">2048 TB</span>
+                </div>
+                <div class="actions">
+                    <a class="action" href="https://play.google.com/store/apps/details?id=com.hopalt.bit2048extreame" target="_blank" rel="noopener">Google Play</a>
+                    <a class="action secondary" href="https://bit2048extreme.hopalt.com/privacy_policy_bit2048Extreame.html" target="_blank" rel="noopener" data-ko="개인정보 처리방침" data-en="Privacy Policy">개인정보 처리방침</a>
                 </div>
             </article>
 
