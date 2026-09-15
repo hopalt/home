@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="hopalt가 직접 쓰려고 만들고 공개한 앱들을 모아둔 홈페이지입니다.">
 <meta property="og:title" content="hopalt.com">
-<meta property="og:description" content="Bit2048, Bit2048 Hard, Bit2048 Extreme, Super Foam Pixel, 혈압 가계부, 아가노트를 한곳에서 만나보세요.">
+<meta property="og:description" content="Bit2048, Bit2048 Hard, Bit2048 Extreme, Super Foam Pixel, 혈압 가계부, 아가노트, 유닛픽을 한곳에서 만나보세요.">
 <meta property="og:image" content="images/icons/hopalt.png">
 <title>hopalt.com</title>
 <link rel="icon" type="image/png" href="images/icons/hopalt.png">
@@ -35,6 +35,8 @@
         --warm-soft: #fff5ee;
         --baby: #5176c9;
         --baby-soft: #eef4ff;
+        --unit: #3b5bdb;
+        --unit-soft: #eef1fe;
     }
 
     body {
@@ -290,6 +292,11 @@
     .tone-baby {
         --tone: var(--baby);
         --tone-soft: var(--baby-soft);
+    }
+
+    .tone-unit {
+        --tone: var(--unit);
+        --tone-soft: var(--unit-soft);
     }
 
     .card-top {
@@ -566,16 +573,16 @@
             </h1>
             <p class="hero-sub">
                 <em>// Built for myself, shared with everyone.</em><br>
-                <span data-ko="직접 필요해서 만들고, 오래 쓸 수 있게 다듬어 온 1인 개발 앱들을 한곳에 모았습니다.<br>2048 퍼즐부터 창작 놀이, 건강 기록, 육아 노트까지 지금 공개된 페이지와 스토어 링크를 바로 확인할 수 있어요."
-                      data-en="A home for solo-built apps I made for my own needs and kept refining for everyday use.<br>From 2048 puzzles to creative play, health records, and baby logs, you can find the latest pages and store links here.">직접 필요해서 만들고, 오래 쓸 수 있게 다듬어 온 1인 개발 앱들을 한곳에 모았습니다.<br>2048 퍼즐부터 창작 놀이, 건강 기록, 육아 노트까지 지금 공개된 페이지와 스토어 링크를 바로 확인할 수 있어요.</span>
+                <span data-ko="직접 필요해서 만들고, 오래 쓸 수 있게 다듬어 온 1인 개발 앱들을 한곳에 모았습니다.<br>2048 퍼즐부터 창작 놀이, 건강 기록, 육아 노트, 단위 변환까지 지금 공개된 페이지와 스토어 링크를 바로 확인할 수 있어요."
+                      data-en="A home for solo-built apps I made for my own needs and kept refining for everyday use.<br>From 2048 puzzles to creative play, health records, baby logs, and unit conversion, you can find the latest pages and store links here.">직접 필요해서 만들고, 오래 쓸 수 있게 다듬어 온 1인 개발 앱들을 한곳에 모았습니다.<br>2048 퍼즐부터 창작 놀이, 건강 기록, 육아 노트, 단위 변환까지 지금 공개된 페이지와 스토어 링크를 바로 확인할 수 있어요.</span>
             </p>
             <div class="hero-stats" aria-label="앱 현황" data-aria-ko="앱 현황" data-aria-en="App status">
                 <div class="stat">
-                    <strong>6</strong>
+                    <strong>7</strong>
                     <span data-ko="통합 등록 앱" data-en="Apps in the hub">통합 등록 앱</span>
                 </div>
                 <div class="stat">
-                    <strong>6</strong>
+                    <strong>7</strong>
                     <span data-ko="공개 홈페이지" data-en="Public homepages">공개 홈페이지</span>
                 </div>
                 <div class="stat">
@@ -735,6 +742,29 @@
                 <div class="actions">
                     <a class="action" href="https://play.google.com/store/apps/details?id=com.hopalt.babylog" target="_blank" rel="noopener">Google Play</a>
                     <a class="action secondary" href="https://aganote.hopalt.com/privacy.html" target="_blank" rel="noopener" data-ko="개인정보 처리방침" data-en="Privacy Policy">개인정보 처리방침</a>
+                </div>
+            </article>
+
+            <article class="app-card tone-unit" tabindex="0" role="link" data-home-url="https://unitpick.hopalt.com/" data-label-ko="유닛픽 홈페이지 열기" data-label-en="Open UnitPick homepage" aria-label="유닛픽 홈페이지 열기">
+                <div class="card-top">
+                    <img class="app-icon" src="images/icons/unitpick.png" alt="유닛픽 UnitPick 앱 아이콘" data-alt-ko="유닛픽 UnitPick 앱 아이콘" data-alt-en="UnitPick app icon">
+                    <span class="status">LIVE</span>
+                </div>
+                <h3 class="app-name">유닛픽<br><span class="mono">UnitPick</span></h3>
+                <p class="app-desc"
+                   data-ko="길이·무게·온도부터 평·돈·되 같은 한국 전통 단위까지 10개 분야 115개 단위를 다루고, 계산식도 그대로 입력할 수 있는 오프라인 단위 변환 앱입니다."
+                   data-en="An offline unit converter covering 115 units across 10 categories—including Korean traditional units—where you can type full expressions instead of plain numbers.">길이·무게·온도부터 평·돈·되 같은 한국 전통 단위까지 10개 분야 115개 단위를 다루고, 계산식도 그대로 입력할 수 있는 오프라인 단위 변환 앱입니다.</p>
+                <div class="showcase showcase-series">
+                    <img data-lang-src-ko="images/showcase/unitpick-feature-ko.png" data-lang-src-en="images/showcase/unitpick-feature-en.png" data-lang-tag="ko-KR" src="images/showcase/unitpick-feature-ko.png" alt="유닛픽 피처 그래픽" data-alt-ko="유닛픽 피처 그래픽" data-alt-en="UnitPick feature graphic">
+                </div>
+                <div class="chips">
+                    <span class="chip">115 units</span>
+                    <span class="chip">Korean units</span>
+                    <span class="chip">Offline</span>
+                </div>
+                <div class="actions">
+                    <a class="action" href="https://play.google.com/store/apps/details?id=com.hopalt.unitconv" target="_blank" rel="noopener">Google Play</a>
+                    <a class="action secondary" href="https://unitpick.hopalt.com/privacy/" target="_blank" rel="noopener" data-ko="개인정보 처리방침" data-en="Privacy Policy">개인정보 처리방침</a>
                 </div>
             </article>
         </div>
