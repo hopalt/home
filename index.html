@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="hopalt가 직접 쓰려고 만들고 공개한 앱들을 모아둔 홈페이지입니다.">
 <meta property="og:title" content="hopalt.com">
-<meta property="og:description" content="Bit2048, Bit2048 Hard, Bit2048 Extreme, Super Foam Pixel, 혈압 가계부, 아가노트, 유닛픽을 한곳에서 만나보세요.">
+<meta property="og:description" content="Bit2048 시리즈, Super Foam Pixel, Super Foam Canvas와 생활 앱들을 한곳에서 만나보세요.">
 <meta property="og:image" content="images/icons/hopalt.png">
 <title>hopalt.com</title>
 <link rel="icon" type="image/png" href="images/icons/hopalt.png">
@@ -31,6 +31,8 @@
         --purple-soft: #f2ecff;
         --foam: #0ea5a4;
         --foam-soft: #e9fbfa;
+        --canvas: #df6f8f;
+        --canvas-soft: #fff0f5;
         --warm: #a9542c;
         --warm-soft: #fff5ee;
         --baby: #5176c9;
@@ -284,6 +286,11 @@
         --tone-soft: var(--foam-soft);
     }
 
+    .tone-canvas {
+        --tone: var(--canvas);
+        --tone-soft: var(--canvas-soft);
+    }
+
     .tone-warm {
         --tone: var(--warm);
         --tone-soft: var(--warm-soft);
@@ -377,6 +384,20 @@
     .showcase-series img {
         aspect-ratio: 1024 / 500;
         object-position: center;
+    }
+
+    .showcase-canvas {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 7px;
+        padding: 9px;
+    }
+
+    .showcase-canvas img {
+        aspect-ratio: 9 / 16;
+        border-radius: 10px;
+        object-fit: cover;
+        object-position: top;
     }
 
     .showcase-split {
@@ -578,11 +599,11 @@
             </p>
             <div class="hero-stats" aria-label="앱 현황" data-aria-ko="앱 현황" data-aria-en="App status">
                 <div class="stat">
-                    <strong>7</strong>
+                    <strong>8</strong>
                     <span data-ko="통합 등록 앱" data-en="Apps in the hub">통합 등록 앱</span>
                 </div>
                 <div class="stat">
-                    <strong>7</strong>
+                    <strong>8</strong>
                     <span data-ko="공개 홈페이지" data-en="Public homepages">공개 홈페이지</span>
                 </div>
                 <div class="stat">
@@ -694,6 +715,32 @@
                 <div class="actions">
                     <a class="action" href="https://play.google.com/store/apps/details?id=com.hopalt.dfblock" target="_blank" rel="noopener">Google Play</a>
                     <a class="action secondary" href="https://sfp.hopalt.com/privacy/" target="_blank" rel="noopener" data-ko="개인정보 처리방침" data-en="Privacy Policy">개인정보 처리방침</a>
+                </div>
+            </article>
+
+            <article class="app-card tone-canvas" tabindex="0" role="link" data-home-url="super-foam-canvas/" data-label-ko="Super Foam Canvas 소개 페이지 열기" data-label-en="Open the Super Foam Canvas page" aria-label="Super Foam Canvas 소개 페이지 열기">
+                <div class="card-top">
+                    <img class="app-icon" src="images/icons/super-foam-canvas.png" alt="Super Foam Canvas 앱 아이콘" data-alt-ko="Super Foam Canvas 앱 아이콘" data-alt-en="Super Foam Canvas app icon">
+                    <span class="status">PAGE</span>
+                </div>
+                <h3 class="app-name"><span class="mono">Super Foam Canvas</span></h3>
+                <p class="app-desc"
+                   data-ko="SFC World에서 도안을 고르고 연필과 크레용으로 자유롭게 색칠해 작품을 저장하고 나누는 어린이용 창작 앱입니다."
+                   data-en="A creative coloring app for young artists to explore SFC World, color with pencils and crayons, then save or share their artwork.">SFC World에서 도안을 고르고 연필과 크레용으로 자유롭게 색칠해 작품을 저장하고 나누는 어린이용 창작 앱입니다.</p>
+                <div class="showcase showcase-canvas" aria-label="Super Foam Canvas 실제 앱 화면" data-aria-ko="Super Foam Canvas 실제 앱 화면" data-aria-en="Super Foam Canvas app screens">
+                    <img data-lang-src-ko="super-foam-canvas/assets/ko-01.webp" data-lang-src-en="super-foam-canvas/assets/en-01.webp" src="super-foam-canvas/assets/ko-01.webp" alt="Super Foam Canvas 홈 화면" data-alt-ko="Super Foam Canvas 홈 화면" data-alt-en="Super Foam Canvas home screen">
+                    <img data-lang-src-ko="super-foam-canvas/assets/ko-02.webp" data-lang-src-en="super-foam-canvas/assets/en-02.webp" src="super-foam-canvas/assets/ko-02.webp" alt="도안 선택 화면" data-alt-ko="도안 선택 화면" data-alt-en="Coloring page collection">
+                    <img data-lang-src-ko="super-foam-canvas/assets/ko-03.webp" data-lang-src-en="super-foam-canvas/assets/en-03.webp" src="super-foam-canvas/assets/ko-03.webp" alt="색칠 캔버스" data-alt-ko="색칠 캔버스" data-alt-en="Coloring canvas">
+                    <img data-lang-src-ko="super-foam-canvas/assets/ko-04.webp" data-lang-src-en="super-foam-canvas/assets/en-04.webp" src="super-foam-canvas/assets/ko-04.webp" alt="완성 작품" data-alt-ko="완성 작품" data-alt-en="Completed artwork">
+                </div>
+                <div class="chips">
+                    <span class="chip">SFC World</span>
+                    <span class="chip">Coloring</span>
+                    <span class="chip">Save &amp; share</span>
+                </div>
+                <div class="actions">
+                    <a class="action" href="super-foam-canvas/" data-ko="소개 페이지" data-en="Learn more">소개 페이지</a>
+                    <a class="action secondary" href="super-foam-canvas/ko/privacy/" data-lang-href-ko="super-foam-canvas/ko/privacy/" data-lang-href-en="super-foam-canvas/privacy/" data-ko="개인정보처리방침" data-en="Privacy Policy">개인정보처리방침</a>
                 </div>
             </article>
 
@@ -825,6 +872,10 @@
         document.querySelectorAll('[data-lang-src-ko][data-lang-src-en]').forEach((img) => {
             img.src = img.dataset[`langSrc${lang === 'ko' ? 'Ko' : 'En'}`];
             img.dataset.langTag = lang === 'ko' ? 'ko-KR' : 'en-US';
+        });
+
+        document.querySelectorAll('[data-lang-href-ko][data-lang-href-en]').forEach((link) => {
+            link.href = link.dataset[`langHref${lang === 'ko' ? 'Ko' : 'En'}`];
         });
 
         document.querySelectorAll('[data-lang-button]').forEach((button) => {
