@@ -78,6 +78,8 @@ h1 { margin: 0; max-width: 720px; font-size: clamp(3.25rem, 6.4vw, 6.3rem); line
 .button:hover { transform: translateY(-2px); box-shadow: 0 10px 0 rgba(40,36,29,.11); }
 .button.secondary { border-color: rgba(40,36,29,.16); background: rgba(255,255,255,.86); color: var(--ink); box-shadow: none; }
 .button.secondary::after { content: "↗"; }
+.button.store-button::before { content: ""; width: 0; height: 0; border-top: 7px solid transparent; border-bottom: 7px solid transparent; border-left: 12px solid #9be1cf; filter: drop-shadow(-3px -3px 0 #ffb4c9) drop-shadow(0 3px 0 #ffc83d); }
+.button.store-button::after { content: "↗"; }
 .hero-note { display: flex; flex-wrap: wrap; gap: 9px 18px; margin: 24px 0 0; padding: 0; color: #655c4e; font-size: .91rem; font-weight: 780; list-style: none; }
 .hero-note li::before { content: "✓"; display: inline-grid; place-items: center; width: 19px; height: 19px; margin-right: 7px; border-radius: 50%; background: rgba(255,255,255,.78); color: #278c73; font-size: .72rem; font-weight: 950; }
 
@@ -103,10 +105,12 @@ h1 { margin: 0; max-width: 720px; font-size: clamp(3.25rem, 6.4vw, 6.3rem); line
 .trust-list { display: grid; grid-template-columns: repeat(3, 1fr); overflow: hidden; border: 1px solid var(--line); border-radius: 25px; background: var(--paper); box-shadow: var(--shadow-soft); }
 .trust-item { display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 92px; padding: 19px 24px; text-align: left; }
 .trust-item + .trust-item { border-left: 1px solid var(--line); }
-.trust-icon { display: grid; flex: 0 0 auto; place-items: center; width: 43px; height: 43px; border-radius: 15px; background: #fff1ba; font-size: 1.25rem; }
+.trust-icon { display: grid; flex: 0 0 auto; place-items: center; width: 52px; height: 52px; border-radius: 17px; background: #fff1ba; }
 .trust-item:nth-child(2) .trust-icon { background: #d4f5e8; }
 .trust-item:nth-child(3) .trust-icon { background: #ffe0e9; }
-.trust-item strong, .trust-item span { display: block; }
+.trust-icon img { width: 36px; height: 36px; object-fit: contain; }
+.trust-icon.trust-language { color: #924a68; font-size: .68rem; font-weight: 950; letter-spacing: -.08em; line-height: 1; }
+.trust-item > div strong, .trust-item > div span { display: block; }
 .trust-item strong { font-size: .96rem; }
 .trust-item span { margin-top: 1px; color: var(--muted); font-size: .82rem; }
 
@@ -124,16 +128,19 @@ h2 { margin: 0 0 15px; font-size: clamp(2.25rem, 4.6vw, 4rem); line-height: 1.03
 .feature-card.large { grid-row: 1 / span 2; min-height: 540px; background: #fff0bd; }
 .feature-card.mint { background: #d7f6eb; }
 .feature-card.pink { background: #ffe3eb; }
-.feature-icon { display: grid; place-items: center; width: 50px; height: 50px; border: 2px solid rgba(40,36,29,.1); border-radius: 17px; background: rgba(255,255,255,.72); font-size: 1.45rem; }
+.feature-icon { display: grid; place-items: center; width: 50px; height: 50px; border: 2px solid rgba(40,36,29,.1); border-radius: 17px; background: rgba(255,255,255,.72); }
+.feature-icon img { width: 34px; height: 34px; object-fit: contain; }
 .feature-card h3 { max-width: 460px; margin: 17px 0 8px; font-size: clamp(1.35rem, 2.2vw, 1.85rem); line-height: 1.15; letter-spacing: -.025em; }
 .feature-card p { max-width: 470px; margin: 0; color: #665e50; }
-.tool-parade { position: absolute; left: 25px; right: 25px; bottom: 26px; height: 210px; }
-.tool-chip { position: absolute; bottom: 0; display: grid; place-items: center; width: 78px; height: 154px; border: 3px solid var(--ink); border-radius: 30px 30px 22px 22px; background: var(--paper); box-shadow: 0 10px 0 rgba(40,36,29,.12); font-size: 2rem; transform-origin: bottom center; }
-.tool-chip::after { content: ""; position: absolute; bottom: 18px; width: 45%; height: 10px; border-radius: 999px; background: currentColor; opacity: .7; }
-.tool-chip:nth-child(1) { left: 5%; color: #f26f54; transform: rotate(-8deg); }
-.tool-chip:nth-child(2) { left: 27%; height: 185px; color: #f5b82e; background: #fff7d5; transform: rotate(3deg); }
-.tool-chip:nth-child(3) { left: 51%; height: 168px; color: #4db89d; background: #e7faf4; transform: rotate(-2deg); }
-.tool-chip:nth-child(4) { right: 3%; height: 140px; color: #ee7aa2; background: #fff0f5; transform: rotate(9deg); }
+.tool-parade { position: absolute; left: 22px; right: 22px; bottom: 20px; display: flex; align-items: flex-end; justify-content: center; gap: clamp(3px, 1vw, 11px); height: 225px; padding: 20px 18px 0; border-radius: 28px; background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,.5)); }
+.tool-pencil { width: min(12%, 58px); height: auto; max-height: 190px; object-fit: contain; transform-origin: bottom center; filter: drop-shadow(0 10px 5px rgba(69, 48, 14, .16)); }
+.tool-pencil:nth-child(1) { transform: translateY(12px) rotate(-7deg); }
+.tool-pencil:nth-child(2) { transform: translateY(-4px) rotate(3deg); }
+.tool-pencil:nth-child(3) { transform: translateY(8px) rotate(-2deg); }
+.tool-pencil:nth-child(4) { transform: translateY(-10px) rotate(2deg); }
+.tool-pencil:nth-child(5) { transform: translateY(5px) rotate(-3deg); }
+.tool-pencil:nth-child(6) { transform: translateY(-1px) rotate(5deg); }
+.tool-pencil:nth-child(7) { transform: translateY(13px) rotate(-4deg); }
 .mini-feature-art { position: absolute; right: -18px; bottom: -18px; width: 150px; height: 150px; border: 2px solid rgba(40,36,29,.12); border-radius: 50%; background: rgba(255,255,255,.65); }
 .mini-feature-art::before { content: ""; position: absolute; inset: 29px; border: 8px solid currentColor; border-radius: 50%; opacity: .55; }
 .mini-feature-art.zoom { color: var(--mint-deep); }
@@ -232,7 +239,8 @@ h2 { margin: 0 0 15px; font-size: clamp(2.25rem, 4.6vw, 4rem); line-height: 1.03
   .step-card { padding: 11px 11px 20px; }
   .screen-frame { aspect-ratio: 9 / 17.8; }
   .feature-card { padding: 28px; }
-  .tool-parade { left: 12px; right: 12px; transform: scale(.88); transform-origin: bottom center; }
+  .tool-parade { left: 8px; right: 8px; gap: 3px; padding-inline: 8px; }
+  .tool-pencil { width: 12.5%; }
   .footer-row { display: grid; }
 }
 @media (prefers-reduced-motion: reduce) {
