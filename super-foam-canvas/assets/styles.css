@@ -135,7 +135,6 @@ h2 { margin: 0 0 15px; font-size: clamp(2.25rem, 4.6vw, 4rem); line-height: 1.03
 .tool-scene { position: absolute; left: 22px; right: 22px; bottom: 18px; height: 300px; }
 .tool-paper { position: absolute; inset: 3px 5% auto 7%; height: 188px; overflow: hidden; border: 2px solid rgba(96, 72, 30, .12); border-radius: 24px; background: rgba(255,255,255,.78); box-shadow: 0 12px 24px rgba(95,68,13,.08); transform: rotate(-1.7deg); }
 .tool-doodle { display: block; width: 100%; height: 100%; }
-.tool-eraser { position: absolute; z-index: 3; right: 3%; top: 116px; width: 58px; height: auto; transform: rotate(17deg); filter: drop-shadow(0 9px 5px rgba(69,48,14,.17)); }
 .tool-parade { position: absolute; z-index: 4; left: 0; right: 0; bottom: 38px; display: flex; align-items: flex-end; justify-content: center; gap: clamp(3px, 1vw, 11px); height: 172px; padding: 0 38px 0 10px; }
 .tool-pencil { width: min(12%, 54px); height: auto; max-height: 174px; object-fit: contain; transform-origin: bottom center; filter: drop-shadow(0 10px 5px rgba(69, 48, 14, .16)); }
 .tool-pencil:nth-child(1) { transform: translateY(12px) rotate(-7deg); }
@@ -241,7 +240,6 @@ h2 { margin: 0 0 15px; font-size: clamp(2.25rem, 4.6vw, 4rem); line-height: 1.03
   .feature-card { padding: 28px; }
   .tool-scene { left: 8px; right: 8px; height: 285px; }
   .tool-paper { inset-inline: 6%; height: 176px; }
-  .tool-eraser { right: 2%; top: 115px; width: 50px; }
   .tool-parade { gap: 3px; padding: 0 34px 0 6px; }
   .tool-pencil { width: 12.5%; }
   .footer-row { display: grid; }
