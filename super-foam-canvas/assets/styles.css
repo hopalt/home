@@ -132,8 +132,12 @@ h2 { margin: 0 0 15px; font-size: clamp(2.25rem, 4.6vw, 4rem); line-height: 1.03
 .feature-icon img { width: 34px; height: 34px; object-fit: contain; }
 .feature-card h3 { max-width: 460px; margin: 17px 0 8px; font-size: clamp(1.35rem, 2.2vw, 1.85rem); line-height: 1.15; letter-spacing: -.025em; }
 .feature-card p { max-width: 470px; margin: 0; color: #665e50; }
-.tool-parade { position: absolute; left: 22px; right: 22px; bottom: 20px; display: flex; align-items: flex-end; justify-content: center; gap: clamp(3px, 1vw, 11px); height: 225px; padding: 20px 18px 0; border-radius: 28px; background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,.5)); }
-.tool-pencil { width: min(12%, 58px); height: auto; max-height: 190px; object-fit: contain; transform-origin: bottom center; filter: drop-shadow(0 10px 5px rgba(69, 48, 14, .16)); }
+.tool-scene { position: absolute; left: 22px; right: 22px; bottom: 18px; height: 300px; }
+.tool-paper { position: absolute; inset: 3px 5% auto 7%; height: 188px; overflow: hidden; border: 2px solid rgba(96, 72, 30, .12); border-radius: 24px; background: rgba(255,255,255,.78); box-shadow: 0 12px 24px rgba(95,68,13,.08); transform: rotate(-1.7deg); }
+.tool-doodle { display: block; width: 100%; height: 100%; }
+.tool-eraser { position: absolute; z-index: 3; right: 3%; top: 116px; width: 58px; height: auto; transform: rotate(17deg); filter: drop-shadow(0 9px 5px rgba(69,48,14,.17)); }
+.tool-parade { position: absolute; z-index: 4; left: 0; right: 0; bottom: 38px; display: flex; align-items: flex-end; justify-content: center; gap: clamp(3px, 1vw, 11px); height: 172px; padding: 0 38px 0 10px; }
+.tool-pencil { width: min(12%, 54px); height: auto; max-height: 174px; object-fit: contain; transform-origin: bottom center; filter: drop-shadow(0 10px 5px rgba(69, 48, 14, .16)); }
 .tool-pencil:nth-child(1) { transform: translateY(12px) rotate(-7deg); }
 .tool-pencil:nth-child(2) { transform: translateY(-4px) rotate(3deg); }
 .tool-pencil:nth-child(3) { transform: translateY(8px) rotate(-2deg); }
@@ -150,12 +154,8 @@ h2 { margin: 0 0 15px; font-size: clamp(2.25rem, 4.6vw, 4rem); line-height: 1.03
 
 .journey { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; align-items: start; }
 .step-card { position: relative; padding: 13px 13px 22px; border: 2px solid var(--line); border-radius: 30px; background: var(--paper); box-shadow: var(--shadow-card); }
-.step-card:nth-child(2) { margin-top: 36px; transform: rotate(1deg); }
-.step-card:nth-child(3) { margin-top: 6px; transform: rotate(-1deg); }
-.step-card:nth-child(4) { margin-top: 42px; transform: rotate(1.4deg); }
-.screen-frame { position: relative; overflow: hidden; aspect-ratio: 9 / 18.3; border: 1px solid var(--line); border-radius: 22px; background: #f8f4ea; }
-.screen-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
-.step-card:last-child .screen-frame img { object-position: center; }
+.screen-frame { position: relative; overflow: hidden; aspect-ratio: 9 / 20; border: 1px solid var(--line); border-radius: 22px; background: #fff; }
+.screen-frame img { width: 100%; height: 100%; object-fit: contain; object-position: center; }
 .step-number { position: absolute; z-index: 3; left: 23px; top: 23px; display: grid; place-items: center; width: 40px; height: 40px; border: 2px solid var(--ink); border-radius: 50%; background: var(--yellow); font-size: .9rem; font-weight: 950; box-shadow: 0 4px 0 rgba(40,36,29,.16); }
 .step-card:nth-child(2) .step-number { background: var(--mint); }
 .step-card:nth-child(3) .step-number { background: var(--pink); }
@@ -237,9 +237,12 @@ h2 { margin: 0 0 15px; font-size: clamp(2.25rem, 4.6vw, 4rem); line-height: 1.03
   .doodle.crayon { right: -4px; top: 40%; font-size: 38px; }
   .journey { grid-template-columns: 1fr; max-width: 330px; }
   .step-card { padding: 11px 11px 20px; }
-  .screen-frame { aspect-ratio: 9 / 17.8; }
+  .screen-frame { aspect-ratio: 9 / 20; }
   .feature-card { padding: 28px; }
-  .tool-parade { left: 8px; right: 8px; gap: 3px; padding-inline: 8px; }
+  .tool-scene { left: 8px; right: 8px; height: 285px; }
+  .tool-paper { inset-inline: 6%; height: 176px; }
+  .tool-eraser { right: 2%; top: 115px; width: 50px; }
+  .tool-parade { gap: 3px; padding: 0 34px 0 6px; }
   .tool-pencil { width: 12.5%; }
   .footer-row { display: grid; }
 }
