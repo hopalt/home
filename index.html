@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="hopalt가 직접 쓰려고 만들고 공개한 앱들을 모아둔 홈페이지입니다.">
 <meta property="og:title" content="hopalt.com">
-<meta property="og:description" content="Bit2048 시리즈, Super Foam Pixel, Super Foam Canvas와 생활 앱들을 한곳에서 만나보세요.">
+<meta property="og:description" content="Bit2048 시리즈, Super Foam Pixel, Super Foam Canvas와 생활·여행 앱들을 한곳에서 만나보세요.">
 <meta property="og:image" content="images/icons/hopalt.png">
 <title>hopalt.com</title>
 <link rel="icon" type="image/png" href="images/icons/hopalt.png">
@@ -39,6 +39,8 @@
         --baby-soft: #eef4ff;
         --unit: #3b5bdb;
         --unit-soft: #eef1fe;
+        --stamp: #b5452f;
+        --stamp-soft: #fbefe9;
     }
 
     body {
@@ -306,6 +308,11 @@
         --tone-soft: var(--unit-soft);
     }
 
+    .tone-stamp {
+        --tone: var(--stamp);
+        --tone-soft: var(--stamp-soft);
+    }
+
     .card-top {
         display: flex;
         justify-content: space-between;
@@ -472,6 +479,24 @@
         opacity: 0.88;
     }
 
+    .action.pending {
+        color: #8a8a8a;
+        background: #f3f3f3;
+        cursor: default;
+    }
+
+    .action.pending:hover {
+        transform: none;
+        opacity: 1;
+    }
+
+    .app-note {
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.6;
+        margin: -6px 0 16px;
+    }
+
     .footer-wrap {
         border-top: 1px solid var(--line);
         margin-top: 18px;
@@ -594,16 +619,16 @@
             </h1>
             <p class="hero-sub">
                 <em>// Built for myself, shared with everyone.</em><br>
-                <span data-ko="직접 필요해서 만들고, 오래 쓸 수 있게 다듬어 온 1인 개발 앱들을 한곳에 모았습니다.<br>2048 퍼즐부터 창작 놀이, 건강 기록, 육아 노트, 단위 변환까지 지금 공개된 페이지와 스토어 링크를 바로 확인할 수 있어요."
-                      data-en="A home for solo-built apps I made for my own needs and kept refining for everyday use.<br>From 2048 puzzles to creative play, health records, baby logs, and unit conversion, you can find the latest pages and store links here.">직접 필요해서 만들고, 오래 쓸 수 있게 다듬어 온 1인 개발 앱들을 한곳에 모았습니다.<br>2048 퍼즐부터 창작 놀이, 건강 기록, 육아 노트, 단위 변환까지 지금 공개된 페이지와 스토어 링크를 바로 확인할 수 있어요.</span>
+                <span data-ko="직접 필요해서 만들고, 오래 쓸 수 있게 다듬어 온 1인 개발 앱들을 한곳에 모았습니다.<br>2048 퍼즐부터 창작 놀이, 건강 기록, 육아 노트, 단위 변환, 국가유산 방문 기록까지 지금 공개된 페이지와 스토어 링크를 바로 확인할 수 있어요."
+                      data-en="A home for solo-built apps I made for my own needs and kept refining for everyday use.<br>From 2048 puzzles to creative play, health records, baby logs, unit conversion, and heritage visit logs, you can find the latest pages and store links here.">직접 필요해서 만들고, 오래 쓸 수 있게 다듬어 온 1인 개발 앱들을 한곳에 모았습니다.<br>2048 퍼즐부터 창작 놀이, 건강 기록, 육아 노트, 단위 변환, 국가유산 방문 기록까지 지금 공개된 페이지와 스토어 링크를 바로 확인할 수 있어요.</span>
             </p>
             <div class="hero-stats" aria-label="앱 현황" data-aria-ko="앱 현황" data-aria-en="App status">
                 <div class="stat">
-                    <strong>8</strong>
+                    <strong>9</strong>
                     <span data-ko="통합 등록 앱" data-en="Apps in the hub">통합 등록 앱</span>
                 </div>
                 <div class="stat">
-                    <strong>8</strong>
+                    <strong>9</strong>
                     <span data-ko="공개 홈페이지" data-en="Public homepages">공개 홈페이지</span>
                 </div>
                 <div class="stat">
@@ -815,6 +840,33 @@
                     <a class="action secondary" href="https://unitpick.hopalt.com/privacy/" target="_blank" rel="noopener" data-ko="개인정보 처리방침" data-en="Privacy Policy">개인정보 처리방침</a>
                 </div>
             </article>
+
+            <article class="app-card tone-stamp" tabindex="0" role="link" data-home-url="https://khstamp.hopalt.com/" data-label-ko="국가유산 방문 도우미 홈페이지 열기" data-label-en="Open the Heritage Visit Helper homepage" aria-label="국가유산 방문 도우미 홈페이지 열기">
+                <div class="card-top">
+                    <img class="app-icon" src="images/icons/heritage-stamp.png" alt="국가유산 방문 도우미 앱 아이콘" data-alt-ko="국가유산 방문 도우미 앱 아이콘" data-alt-en="Heritage Visit Helper app icon">
+                    <span class="status">NEW</span>
+                </div>
+                <h3 class="app-name">국가유산 방문 도우미</h3>
+                <p class="app-desc"
+                   data-ko="국가유산 방문코스 13개 길, 100여 곳의 방문자 여권 도장을 가족과 함께 채우는 기록 앱입니다. 어디까지 찍었는지, 도장은 어디 있는지, 다음 기념품까지 몇 개 남았는지 한 화면에서 보고, 회원가입 없이 기록은 내 폰에만 저장됩니다."
+                   data-en="A family stamp log for the Korea Heritage visitor passport—13 routes and 100+ sites. See where you’ve stamped, where each stamp is, and how many are left until the next souvenir, all on one screen. No sign-up; records stay on your phone.">국가유산 방문코스 13개 길, 100여 곳의 방문자 여권 도장을 가족과 함께 채우는 기록 앱입니다. 어디까지 찍었는지, 도장은 어디 있는지, 다음 기념품까지 몇 개 남았는지 한 화면에서 보고, 회원가입 없이 기록은 내 폰에만 저장됩니다.</p>
+                <p class="app-note"
+                   data-ko="국가유산청·국가유산진흥원과 무관한 개인 개발 앱이에요."
+                   data-en="An independent app, not affiliated with the Korea Heritage Service or the Korea Cultural Heritage Foundation.">국가유산청·국가유산진흥원과 무관한 개인 개발 앱이에요.</p>
+                <div class="showcase showcase-series">
+                    <img src="images/showcase/heritage-stamp-feature.jpg" alt="국가유산 방문 도우미 피처 그래픽" data-alt-ko="국가유산 방문 도우미 피처 그래픽" data-alt-en="Heritage Visit Helper feature graphic">
+                </div>
+                <div class="chips">
+                    <span class="chip">Visitor passport</span>
+                    <span class="chip">Family records</span>
+                    <span class="chip">No sign-up</span>
+                </div>
+                <div class="actions">
+                    <a class="action" href="https://play.google.com/store/apps/details?id=com.hopalt.heritagestamp" target="_blank" rel="noopener">Google Play</a>
+                    <span class="action pending" aria-disabled="true" data-ko="App Store 준비 중" data-en="App Store coming soon">App Store 준비 중</span>
+                    <a class="action secondary" href="https://khstamp.hopalt.com/privacy/" target="_blank" rel="noopener" data-ko="개인정보 처리방침" data-en="Privacy Policy">개인정보 처리방침</a>
+                </div>
+            </article>
         </div>
     </section>
 
@@ -894,13 +946,13 @@
 
     document.querySelectorAll('.app-card[data-home-url]').forEach((card) => {
         card.addEventListener('click', (event) => {
-            if (event.target.closest('a, button')) return;
+            if (event.target.closest('a, button, .action')) return;
             window.location.href = card.dataset.homeUrl;
         });
 
         card.addEventListener('keydown', (event) => {
             if (event.key !== 'Enter' && event.key !== ' ') return;
-            if (event.target.closest('a, button')) return;
+            if (event.target.closest('a, button, .action')) return;
             event.preventDefault();
             window.location.href = card.dataset.homeUrl;
         });
