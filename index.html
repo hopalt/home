@@ -479,17 +479,6 @@
         opacity: 0.88;
     }
 
-    .action.pending {
-        color: #8a8a8a;
-        background: #f3f3f3;
-        cursor: default;
-    }
-
-    .action.pending:hover {
-        transform: none;
-        opacity: 1;
-    }
-
     .app-note {
         color: var(--muted);
         font-size: 11px;
@@ -863,7 +852,7 @@
                 </div>
                 <div class="actions">
                     <a class="action" href="https://play.google.com/store/apps/details?id=com.hopalt.heritagestamp" target="_blank" rel="noopener">Google Play</a>
-                    <span class="action pending" aria-disabled="true" data-ko="App Store 준비 중" data-en="App Store coming soon">App Store 준비 중</span>
+                    <a class="action" href="https://apps.apple.com/kr/app/%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0-%EB%B0%A9%EB%AC%B8-%EB%8F%84%EC%9A%B0%EB%AF%B8/id6820375376" target="_blank" rel="noopener">App Store</a>
                     <a class="action secondary" href="https://khstamp.hopalt.com/privacy/" target="_blank" rel="noopener" data-ko="개인정보 처리방침" data-en="Privacy Policy">개인정보 처리방침</a>
                 </div>
             </article>
@@ -946,13 +935,13 @@
 
     document.querySelectorAll('.app-card[data-home-url]').forEach((card) => {
         card.addEventListener('click', (event) => {
-            if (event.target.closest('a, button, .action')) return;
+            if (event.target.closest('a, button')) return;
             window.location.href = card.dataset.homeUrl;
         });
 
         card.addEventListener('keydown', (event) => {
             if (event.key !== 'Enter' && event.key !== ' ') return;
-            if (event.target.closest('a, button, .action')) return;
+            if (event.target.closest('a, button')) return;
             event.preventDefault();
             window.location.href = card.dataset.homeUrl;
         });
