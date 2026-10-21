@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="hopalt가 직접 쓰려고 만들고 공개한 앱들을 모아둔 홈페이지입니다.">
 <meta property="og:title" content="hopalt.com">
-<meta property="og:description" content="Bit2048 시리즈, Super Foam Pixel, Super Foam Canvas와 생활·여행 앱들을 한곳에서 만나보세요.">
+<meta property="og:description" content="Bit2048 시리즈, 토치의 화분, Super Foam Pixel, Super Foam Canvas와 생활·여행 앱들을 한곳에서 만나보세요.">
 <meta property="og:image" content="images/icons/hopalt.png">
 <title>hopalt.com</title>
 <link rel="icon" type="image/png" href="images/icons/hopalt.png">
@@ -41,6 +41,8 @@
         --unit-soft: #eef1fe;
         --stamp: #b5452f;
         --stamp-soft: #fbefe9;
+        --flower: #3f8f2a;
+        --flower-soft: #eefae5;
     }
 
     body {
@@ -313,6 +315,11 @@
         --tone-soft: var(--stamp-soft);
     }
 
+    .tone-flower {
+        --tone: var(--flower);
+        --tone-soft: var(--flower-soft);
+    }
+
     .card-top {
         display: flex;
         justify-content: space-between;
@@ -479,6 +486,17 @@
         opacity: 0.88;
     }
 
+    .action.pending {
+        color: #8a8a8a;
+        background: #f3f3f3;
+        cursor: default;
+    }
+
+    .action.pending:hover {
+        transform: none;
+        opacity: 1;
+    }
+
     .app-note {
         color: var(--muted);
         font-size: 11px;
@@ -608,16 +626,16 @@
             </h1>
             <p class="hero-sub">
                 <em>// Built for myself, shared with everyone.</em><br>
-                <span data-ko="직접 필요해서 만들고, 오래 쓸 수 있게 다듬어 온 1인 개발 앱들을 한곳에 모았습니다.<br>2048 퍼즐부터 창작 놀이, 건강 기록, 육아 노트, 단위 변환, 국가유산 방문 기록까지 지금 공개된 페이지와 스토어 링크를 바로 확인할 수 있어요."
-                      data-en="A home for solo-built apps I made for my own needs and kept refining for everyday use.<br>From 2048 puzzles to creative play, health records, baby logs, unit conversion, and heritage visit logs, you can find the latest pages and store links here.">직접 필요해서 만들고, 오래 쓸 수 있게 다듬어 온 1인 개발 앱들을 한곳에 모았습니다.<br>2048 퍼즐부터 창작 놀이, 건강 기록, 육아 노트, 단위 변환, 국가유산 방문 기록까지 지금 공개된 페이지와 스토어 링크를 바로 확인할 수 있어요.</span>
+                <span data-ko="직접 필요해서 만들고, 오래 쓸 수 있게 다듬어 온 1인 개발 앱들을 한곳에 모았습니다.<br>2048·블록 퍼즐부터 창작 놀이, 건강 기록, 육아 노트, 단위 변환, 국가유산 방문 기록까지 지금 공개된 페이지와 스토어 링크를 바로 확인할 수 있어요."
+                      data-en="A home for solo-built apps I made for my own needs and kept refining for everyday use.<br>From 2048 and block puzzles to creative play, health records, baby logs, unit conversion, and heritage visit logs, you can find the latest pages and store links here.">직접 필요해서 만들고, 오래 쓸 수 있게 다듬어 온 1인 개발 앱들을 한곳에 모았습니다.<br>2048·블록 퍼즐부터 창작 놀이, 건강 기록, 육아 노트, 단위 변환, 국가유산 방문 기록까지 지금 공개된 페이지와 스토어 링크를 바로 확인할 수 있어요.</span>
             </p>
             <div class="hero-stats" aria-label="앱 현황" data-aria-ko="앱 현황" data-aria-en="App status">
                 <div class="stat">
-                    <strong>9</strong>
+                    <strong>10</strong>
                     <span data-ko="통합 등록 앱" data-en="Apps in the hub">통합 등록 앱</span>
                 </div>
                 <div class="stat">
-                    <strong>9</strong>
+                    <strong>10</strong>
                     <span data-ko="공개 홈페이지" data-en="Public homepages">공개 홈페이지</span>
                 </div>
                 <div class="stat">
@@ -854,6 +872,30 @@
                     <a class="action" href="https://play.google.com/store/apps/details?id=com.hopalt.heritagestamp" target="_blank" rel="noopener">Google Play</a>
                     <a class="action" href="https://apps.apple.com/kr/app/%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0-%EB%B0%A9%EB%AC%B8-%EB%8F%84%EC%9A%B0%EB%AF%B8/id6820375376" target="_blank" rel="noopener">App Store</a>
                     <a class="action secondary" href="https://khstamp.hopalt.com/privacy/" target="_blank" rel="noopener" data-ko="개인정보 처리방침" data-en="Privacy Policy">개인정보 처리방침</a>
+                </div>
+            </article>
+
+            <article class="app-card tone-flower" tabindex="0" role="link" data-home-url="https://tochi-flowerpot.hopalt.com/" data-label-ko="토치의 화분 홈페이지 열기" data-label-en="Open the Tochi's Flowerpot homepage" aria-label="토치의 화분 홈페이지 열기">
+                <div class="card-top">
+                    <img class="app-icon" src="images/icons/tochi-flowerpot.png" alt="토치의 화분 앱 아이콘" data-alt-ko="토치의 화분 앱 아이콘" data-alt-en="Tochi's Flowerpot app icon">
+                    <span class="status" data-ko="출시 예정" data-en="SOON">출시 예정</span>
+                </div>
+                <h3 class="app-name" data-ko="토치의 화분" data-en="Tochi's Flowerpot">토치의 화분</h3>
+                <p class="app-desc"
+                   data-ko="블록으로 줄을 채우면 꽃봉오리가 피는 퍼즐입니다. 이야기 5장 60판과 추가 정원 500판, 막히면 다음 수 하나만 짚어 주는 도감 힌트, 물방울로 키우는 꽃 50종, 빨리 깬 순서가 아니라 끝까지 해 본 만큼 겨루는 월드 랭킹이 있어요. 회원가입 없이 바로 시작합니다."
+                   data-en="A block puzzle where filling a line makes flower buds bloom. Five story chapters with 60 stages plus 500 extra puzzles, a field-guide hint that shows just the next move, 50 flowers grown with water drops, and a world ranking that rewards effort, not speed. No sign-up.">블록으로 줄을 채우면 꽃봉오리가 피는 퍼즐입니다. 이야기 5장 60판과 추가 정원 500판, 막히면 다음 수 하나만 짚어 주는 도감 힌트, 물방울로 키우는 꽃 50종, 빨리 깬 순서가 아니라 끝까지 해 본 만큼 겨루는 월드 랭킹이 있어요. 회원가입 없이 바로 시작합니다.</p>
+                <div class="showcase showcase-series">
+                    <img src="images/showcase/tochi-flowerpot-feature.jpg" alt="토치의 화분 피처 그래픽" data-alt-ko="토치의 화분 피처 그래픽" data-alt-en="Tochi's Flowerpot feature graphic">
+                </div>
+                <div class="chips">
+                    <span class="chip">Block puzzle</span>
+                    <span class="chip">560 stages</span>
+                    <span class="chip">No sign-up</span>
+                </div>
+                <div class="actions">
+                    <span class="action pending" aria-disabled="true" data-ko="Google Play 준비 중" data-en="Google Play coming soon">Google Play 준비 중</span>
+                    <a class="action secondary" href="https://tochi-flowerpot.hopalt.com/ko/" data-lang-href-ko="https://tochi-flowerpot.hopalt.com/ko/" data-lang-href-en="https://tochi-flowerpot.hopalt.com/" target="_blank" rel="noopener" data-ko="소개 페이지" data-en="Learn more">소개 페이지</a>
+                    <a class="action secondary" href="https://tochi-flowerpot.hopalt.com/ko/privacy/" data-lang-href-ko="https://tochi-flowerpot.hopalt.com/ko/privacy/" data-lang-href-en="https://tochi-flowerpot.hopalt.com/privacy/" target="_blank" rel="noopener" data-ko="개인정보 처리방침" data-en="Privacy Policy">개인정보 처리방침</a>
                 </div>
             </article>
         </div>
